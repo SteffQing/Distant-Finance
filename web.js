@@ -39,7 +39,7 @@ function intro() {
   for (var i = 0; i < intro.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = intro[i].getBoundingClientRect().top;
-    var elementVisible = 50;
+    var elementVisible = 80;
 
     if (elementTop < windowHeight - elementVisible) {
       intro[i].classList.add("active");
