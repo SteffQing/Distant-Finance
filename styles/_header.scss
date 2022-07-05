@@ -1,0 +1,87 @@
+main {
+  background-image: url("../assets/svg/black.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  header {
+    margin: 0 3%;
+    height: fit-content;
+    max-width: 100%;
+    color: white;
+    padding-top: 10%;
+    @media (min-width: $bp-tablet) {
+      display: flex;
+      justify-content: space-between;
+      .hero {
+        order: 1;
+        position: relative;
+        .hero-content {
+          max-width: 75%;
+          position: relative;
+          text-align: left;
+          top: 25%;
+        }
+      }
+      .hero_image {
+        width: 60%;
+        max-width: 70%;
+        order: 2;
+      }
+    }
+    @media (min-width: $bp-pc) {
+      height: 100vh;
+    }
+    .hero {
+      width: 90%;
+      min-width: 45ch;
+      margin: auto;
+      padding: 1em 0;
+      text-align: center;
+      h1 {
+        font-size: $h1;
+        font-family: "robotobold";
+        line-height: 1.3;
+      }
+      h2 {
+        font-size: $h2;
+        line-height: 1.5;
+        font-family: "robotobold";
+      }
+      p {
+        font-size: $p2;
+        color: $textSec;
+        font-family: "robotoregular";
+        line-height: 1.32;
+      }
+      button {
+        background-color: $textSec;
+        color: #000;
+        margin: 1em 0;
+        border-radius: 7px;
+        padding: 0.4em 2em;
+        font-size: $p2;
+        font-family: "robotoblack";
+        cursor: pointer;
+      }
+    }
+    .hero_image {
+      background-color: transparent;
+      max-width: 100%;
+      height: 40rem;
+      max-height: 60%;
+      background-image: url(../assets/images/NFT_Network_aob02g_c_scale_w_667.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      @media (min-width: $bp-phone-1) {
+        max-height: 100%;
+      }
+      @media (min-width: $bp-tablet-1) {
+        background-image: url(../assets/images/NFT_Network_aob02g_c_scale_w_477.png);
+      }
+      @media (min-width: $bp-tablet) {
+        background-image: url(../assets/images/NFT_Network_aob02g_c_scale_w_904.png);
+      }
+    }
+  }
+}
