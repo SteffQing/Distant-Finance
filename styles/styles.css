@@ -1219,12 +1219,17 @@ article aside #about-image {
 #token {
   background-color: black;
   text-align: center;
+  margin: 4em 0;
 }
 
-#token h2 {
+#token h3 {
   color: white;
-  font-size: clamp(2em, 2.5vw, 4em);
+  font-size: clamp(1.6rem, 1.2vw, 2.2rem);
   padding: 0.4em;
+  max-width: 60ch;
+  margin: 0 auto -2.6em auto;
+  line-height: 1.7;
+  letter-spacing: 1.5px;
   font-family: "robotoregular";
 }
 
@@ -1234,37 +1239,29 @@ article aside #about-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: flex;
 }
 
-@media (min-width: 420px) {
+@media (max-width: 373px) {
   #token .token_utilities {
-    width: 100%;
-    margin: 0% auto;
-  }
-}
-
-@media (min-width: 720px) {
-  #token .token_utilities {
-    width: 100%;
-    margin: 0% auto;
-  }
-}
-
-@media (min-width: 1300px) {
-  #token .token_utilities {
-    width: 100%;
-  }
-}
-
-@media (min-width: 1640px) {
-  #token .token_utilities {
-    width: 100%;
+    height: 36em;
+    position: relative;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
 }
 
 #token .token_utilities img {
   margin: 0 auto;
+}
+
+@media (max-width: 373px) {
+  #token .token_utilities img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
 .roadmap-section {
@@ -1477,8 +1474,8 @@ footer .container .jobs li a:link,
 footer .container .contact li a:link {
   text-decoration: none;
   color: gray;
-  -webkit-transition: color 500ms ease-in-out;
-  transition: color 500ms ease-in-out;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 footer .container .socials li a:visited,
