@@ -46,6 +46,42 @@ main {
         font-size: $h2;
         line-height: 1.5;
         font-family: "robotobold";
+        .magic {
+          display: inline-block;
+          position: relative;
+          .magic-star {
+            --size: clamp(20px, 1.5vw, 30px);
+            animation: scale 700ms ease forwards;
+            display: block;
+            height: var(--size);
+            left: var(--star-left);
+            position: absolute;
+            top: var(--star-top);
+            width: var(--size);
+            svg {
+              animation: rotate 1000ms linear infinite;
+              display: block;
+              opacity: 0.7;
+              path {
+                fill: var(--violet);
+              }
+            }
+          }
+          .magic-text {
+            animation: background-pan 3s linear infinite;
+            background: linear-gradient(
+              to right,
+              var(--purple),
+              var(--violet),
+              var(--pink),
+              var(--purple)
+            );
+            background-size: 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            white-space: nowrap;
+          }
+        }
       }
       p {
         font-size: $p2;
@@ -83,5 +119,36 @@ main {
         background-image: url(../assets/images/NFT_Network_aob02g_c_scale_w_904.png);
       }
     }
+  }
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes scale {
+  from,
+  to {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
   }
 }

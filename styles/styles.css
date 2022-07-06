@@ -1,3 +1,9 @@
+:root {
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 183);
+  --pink: rgb(244, 143, 177);
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth !important;
@@ -520,6 +526,45 @@ main header .hero h2 {
   font-family: "robotobold";
 }
 
+main header .hero h2 .magic {
+  display: inline-block;
+  position: relative;
+}
+
+main header .hero h2 .magic .magic-star {
+  --size: clamp(20px, 1.5vw, 30px);
+  -webkit-animation: scale 700ms ease forwards;
+          animation: scale 700ms ease forwards;
+  display: block;
+  height: var(--size);
+  left: var(--star-left);
+  position: absolute;
+  top: var(--star-top);
+  width: var(--size);
+}
+
+main header .hero h2 .magic .magic-star svg {
+  -webkit-animation: rotate 1000ms linear infinite;
+          animation: rotate 1000ms linear infinite;
+  display: block;
+  opacity: 0.7;
+}
+
+main header .hero h2 .magic .magic-star svg path {
+  fill: var(--violet);
+}
+
+main header .hero h2 .magic .magic-text {
+  -webkit-animation: background-pan 3s linear infinite;
+          animation: background-pan 3s linear infinite;
+  background: -webkit-gradient(linear, left top, right top, from(var(--purple)), color-stop(var(--violet)), color-stop(var(--pink)), to(var(--purple)));
+  background: linear-gradient(to right, var(--purple), var(--violet), var(--pink), var(--purple));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
 main header .hero p {
   font-size: clamp(1.5rem, 1.7vw, 2rem);
   color: #eca355;
@@ -564,6 +609,70 @@ main header .hero_image {
 @media (min-width: 720px) {
   main header .hero_image {
     background-image: url(../assets/images/NFT_Network_aob02g_c_scale_w_904.png);
+  }
+}
+
+@-webkit-keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+@-webkit-keyframes scale {
+  from,
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  from,
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
