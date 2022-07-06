@@ -8,6 +8,7 @@ function scrollFunction() {
   } 
 }
 
+//jumping to content at specific height
 const navheight = document.getElementById('navigation').offsetHeight;
 document.documentElement.style.setProperty('--scroll-padding', navheight - 1 + "px")
 
@@ -73,7 +74,7 @@ window.addEventListener("scroll", reveal);
 
 
 
-
+//subheadings animation
 function intro() {
   var intro = document.querySelectorAll(".intro");
 

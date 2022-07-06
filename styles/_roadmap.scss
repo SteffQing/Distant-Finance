@@ -14,7 +14,7 @@
     h2 {
       color: #fff;
       font-size: $h1;
-      font-family: "robotoblack_italic";
+      font-family: "kalam" serif;
       text-align: center;
     }
     .container {
@@ -41,12 +41,12 @@
     border-left: 5px solid gray;
     height: auto;
     color: #fff;
-    font-size: $p;
-    font-family: "robotoregular";
+    font-size: $p1;
+    font-family: kalam;
     line-height: 1.55;
     background: transparent;
     transition: background 1s ease-out;
-    padding: 2.5rem;
+    padding: 3.5rem;
     @media (min-width: $bp-phone-1) {
       width: 85%;
     }
