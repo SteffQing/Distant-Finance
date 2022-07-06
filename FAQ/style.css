@@ -5,6 +5,15 @@
 body {
   background-color: #dde5ec !important;
 }
+.grid {
+  padding-top: 15%;
+}
+
+@media (min-width: 720px) {
+  .grid {
+    padding-top: 10%;
+  }
+}
 .container {
   margin-left: 15vw;
   margin-right: 15vw;
@@ -72,6 +81,7 @@ h2 {
   color: dimgray;
   font-size: 20px;
   transition: color 500ms ease-in-out;
+  white-space: no-wrap;
 }
 
 .docs:hover {
@@ -84,7 +94,7 @@ footer .container h2 {
   margin: 5% auto;
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 410px) {
   .toggle {
     font-size: 12px;
   }
@@ -96,8 +106,11 @@ footer .container h2 {
     overflow: hidden;
     transition: all 1s;
   }
+  .docs {
+    padding: 0;
+  }
 }
-@media only screen and (min-width: 744px) {
+@media only screen and (min-width: 770px) {
   .grid {
     display: grid;
     grid-template-columns: 1fr 2.2fr;
