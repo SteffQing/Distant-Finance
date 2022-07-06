@@ -8,6 +8,7 @@ main {
     height: fit-content;
     max-width: 100%;
     color: white;
+    overflow: hidden;
     padding-top: 10%;
     @media (min-width: $bp-tablet) {
       display: flex;
