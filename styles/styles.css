@@ -1445,7 +1445,7 @@ footer .container .socials h2,
 footer .container .resources h2,
 footer .container .jobs h2,
 footer .container .contact h2 {
-  margin: 5%;
+  margin: 5% auto;
   font-size: clamp(1.8em, 2.1vw, 3.5em);
   font-family: "robotoregular";
   font-weight: 300;

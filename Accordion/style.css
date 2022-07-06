@@ -78,13 +78,10 @@ h2 {
   color: blue;
 }
 
-.container h2 {
+footer .container h2 {
+  width: fit-content;
   color: white;
-  margin: 5% auto !important;
-}
-
-.container h2 span {
-  display: none;
+  margin: 5% auto;
 }
 
 @media only screen and (max-width: 390px) {
